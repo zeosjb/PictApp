@@ -1,0 +1,11 @@
+{
+  "name": "proyecto",
+  "version": "1.0.0",
+  "description": "Aplicación simimlar a instagram",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "author": "José Benítez",
+  "license": "ISC"
+}

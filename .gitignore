@@ -1,0 +1,4 @@
+node_modules/
+.env
+out/
+pict_app.sqlite
