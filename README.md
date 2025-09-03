@@ -5,7 +5,7 @@ Proyecto en clases a seguir de backend para nuestra aplicación similar a instag
 
 ## Dependencias o Liberías a instalar
 ```
-    npm install express express-validator cors sequelize sequelize-cli sqlite3 bcryptjs jsonwebtoken
+    npm install express express-validator cors sequelize sequelize-cli sqlite3 bcryptjs jsonwebtoken dotenv nodemon
 ```
 
 ## Dependencia de desarrollo
