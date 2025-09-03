@@ -4,15 +4,15 @@
 Proyecto en clases a seguir de backend para nuestra aplicación similar a instagram.
 
 ## Dependencias o Liberías a instalar
-´´´
+```
     npm install express express-validator cors sequelize sequelize-cli sqlite3 bcryptjs jsonwebtoken
-´´´
+```
 
 ## Dependencia de desarrollo
 
-´´´
+```
     npm install --save-dev morgan
-´´´
+```
 
 ## Pasos a seguir
 
