@@ -4,7 +4,7 @@ const morgan = require("morgan");
 const cors = require("cors");
 const db = require("./config/database");
 
-// Models 
+// Models
 const User = require("./models/user");
 const Post = require("./models/post");
 const Comment = require("./models/comment");
@@ -63,7 +63,7 @@ class Server {
     }
     
     routes() {
-        this.app.use(this.paths.users, require("./routes/user.route"));
+        this.app.use(this.paths.users, require("./routes/user.routes"));
     }
     
     listen() {
