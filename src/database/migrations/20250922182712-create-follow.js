@@ -3,38 +3,30 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    return queryInterface.createTable('user', {
+    return queryInterface.createTable('follows', {
       id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         primaryKey: true,
         allowNull: false
       },
-      userName: {
-        type: Sequelize.STRING,
+      followerId: {
+        type: Sequelize.INTEGER,
         allowNull: false,
-        unique: true
+        references: {
+          model: 'users',
+          key: 'id'
+        },
+        onDelete: 'CASCADE'
       },
-      email: {
-        type: Sequelize.STRING,
+      followingId: {
+        type: Sequelize.INTEGER,
         allowNull: false,
-        unique: true
-      },
-      password: {
-        type: Sequelize.STRING,
-        allowNull: false
-      },
-      bio: {
-        type: Sequelize.STRING,
-        allowNull: true
-      },
-      profilePicture: {
-        type: Sequelize.STRING,
-        allowNull: true
-      },
-      birthDay: {
-        type: Sequelize.DATE,
-        allowNull: false
+        references: {
+          model: 'users',
+          key: 'id'
+        },
+        onDelete: 'CASCADE'
       },
       createdAt: {
         type: Sequelize.DATE,
@@ -49,10 +41,10 @@ module.exports = {
         allowNull: false,
         defaultValue: false
       }
-    })
+    });
   },
 
   async down (queryInterface, Sequelize) {
-    return queryInterface.dropTable('user')
+    return queryInterface.dropTable('follows');
   }
 };
