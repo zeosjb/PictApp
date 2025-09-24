@@ -37,7 +37,14 @@ Proyecto en clases a seguir de backend para nuestra aplicación similar a instag
 ```
     npx sequelize-cli migration:generate --name <nombre creacion de tabla ej: create-user>
 ```
-* Para correr el proyecto
+* Los scripts están dentro del archivo package.json:
+  * "main": "./src/app.js",
+    "scripts": {
+      "dev": "nodemon",
+      "db:migrate:up": "npx sequelize-cli db:migrate",
+      "db:migrate:down": "npx sequelize-cli db:migrate:undo"
+    },
+  * Para correr el proyecto
 ```
     npm run dev
 ```
