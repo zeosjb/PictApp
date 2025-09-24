@@ -3,6 +3,11 @@
 ## Descripción
 Proyecto en clases a seguir de backend para nuestra aplicación similar a instagram.
 
+## Inicialización del proyecto
+```
+  npm init -y
+```
+
 ## Dependencias o Liberías a instalar
 ```
     npm install express express-validator cors sequelize sequelize-cli sqlite3 bcryptjs jsonwebtoken dotenv nodemon
